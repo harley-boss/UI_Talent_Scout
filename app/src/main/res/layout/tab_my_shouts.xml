@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp">
+
+    <RelativeLayout
+        android:id="@+id/noArtistsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btnSetupArtists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ps_bold"
+            android:textColor="@color/color1"
+            android:text="You must setup your artists first"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/artistsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ps_bold"
+            android:textColor="@color/color1"
+            android:text="Select an artist to shout out"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spnArtists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_margin="30dp"/>
+
+        <EditText
+            android:id="@+id/editShout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spnArtists"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:lines="5"/>
+
+        <TextView
+            android:id="@+id/tvFormSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ps_bold"
+            android:textColor="@color/color1"
+            android:layout_below="@+id/editShout"
+            android:layout_marginTop="10dp"
+            android:text="Select where to post it"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spnMedias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFormSelect"
+            android:layout_margin="30dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
